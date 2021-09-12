@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\KonserController;
+use App\Http\Controllers\PurchasesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,8 @@ Route::get('/', function () {
 });
 
 Route::get('/konsers/{konser}',[KonserController::class,'show']);
+Route::post('/purchases', [PurchasesController::class,'store']);
+
 
 Auth::routes();
 
