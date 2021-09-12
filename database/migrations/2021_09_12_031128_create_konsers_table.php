@@ -25,6 +25,7 @@ class CreateKonsersTable extends Migration
             $table->string('state');
             $table->integer('zip');
             $table->text('additional_information');
+            $table->dateTime('published_at')->nullable();
             $table->timestamps();
         });
     }

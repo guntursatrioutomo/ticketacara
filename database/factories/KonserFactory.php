@@ -35,4 +35,21 @@ class KonserFactory extends Factory
         'additional_information' => 'Contoh isi ini',
         ];
     }
+
+    public function published()
+    {
+    return $this->state(function (array $attributes) {
+        return [
+            'published_at' => Carbon::now()
+        ];
+    });
+    }
+    public function unpublished()
+    {
+    return $this->state(function (array $attributes) {
+        return [
+            'published_at' => null
+        ];
+    });
+    }
 }

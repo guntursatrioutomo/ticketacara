@@ -16,7 +16,7 @@ class KonserTest extends TestCase
     public function user_can_view_a_konser()
     {
         $this->withoutExceptionHandling();
-        $konser = Konser::create([
+        $konser = Konser::factory()->published()->create([
             'title' => 'Aku dan Bintang',
             'subtitle' => 'Persembahan terdalam Peterpan',
             'date'  => Carbon::parse('August 13th, 2019, 8:00pm'),
