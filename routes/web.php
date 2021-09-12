@@ -19,3 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/konsers/{konser}',[KonserController::class,'show']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
