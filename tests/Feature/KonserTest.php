@@ -47,4 +47,14 @@ class KonserTest extends TestCase
         $response->assertSee('Untuk tiket hubungi guntur 081258014806');
         
     }
+
+/** @test */
+
+public function user_can_not_view_unpublished_konser()
+{
+    $konser = Konser::factory()->unpublished()->create();
+    $response = $this->get('/konsers/'.$konser->id);
+    $response->assertStatus(404);
+}
+
 }

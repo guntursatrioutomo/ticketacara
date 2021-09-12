@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Factories;
-
+use Faker as faker;
 use App\Models\Konser;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
@@ -38,7 +38,7 @@ class KonserFactory extends Factory
 
     public function published()
     {
-    return $this->state(function (array $attributes) {
+    return $this->state(function ($faker) {
         return [
             'published_at' => Carbon::now()
         ];
@@ -46,7 +46,7 @@ class KonserFactory extends Factory
     }
     public function unpublished()
     {
-    return $this->state(function (array $attributes) {
+    return $this->state(function ($faker) {
         return [
             'published_at' => null
         ];

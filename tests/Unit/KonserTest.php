@@ -40,4 +40,18 @@ class KonserTest extends TestCase
     
             $this->assertEquals('4.50', $konser->ticket_price_in_dollars);
         }
+           /** @test */
+    // public function concerts_with_published_at_date_are_published()
+    // {
+    //     $publishedConcertA = Konser::factory()->create([ 'published_at'   => Carbon::parse('-1 week') ]);
+    //     $publishedConcertB = Konser::factory()->create([ 'published_at'   => Carbon::parse('-1 week') ]);
+    //     $unpublishedConcertC = Konser::factory()->create([ 'published_at' => null ]);
+
+    //     $publishedConcerts = Konser::published()->get();
+
+    //     $this->assertTrue($publishedConcerts->contains($publishedConcertA));
+    //     $this->assertTrue($publishedConcerts->contains($publishedConcertB));
+    //     $this->assertFalse($publishedConcerts->contains($unpublishedConcertC));
+
+    // }
 }
